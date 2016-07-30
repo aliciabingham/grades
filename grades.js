@@ -15,53 +15,43 @@ var highestScore = scores.pop();
 
 console.log("the highest score is " + highestScore);
 
+grades = [];
+f = 0;
+d = 0;
+c = 0;
+b = 0;
+a = 0;
 
-var countingScores = scores.push();
-/*
-switch (true) {
-  case 1: [i] = 60;
-  console.log("These are the failing grades.")
-  break;
+for (var i = 0; i < scores.length; i++) {
+  switch(true) {
+    case(scores[i] <= 60):
+    f++;
+    break;
 
-  case 2: countingScores < 70;
-  console.log("These are the D grades.")
-  break;
+    case(scores[i] <= 70):
+    d++;
+    break;
 
-  case 3: countingScores < 80;
-  console.log("These are the C grades.")
-  break;
+    case(scores[i] <= 80):
+    c++;
+    break;
 
-  case 4: countingScores < 90;
-  console.log("These are the B grades.")
-  break;
+    case(scores[i] <= 90):
+    b++;
+    break;
 
-  case 5: countingScores < 100;
-  console.log("These are the A grades.")
-  break;
+    case(scores[i] <= 100):
+    a++;
+    break;
+  }
+
 }
-*/
-var dataset = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87], count = {}
 
-dataset.forEach(function(el){
-    count[el] = count[el] + 1 || 1
-});
-
-console.log(count)
+console.log("There are " + a + " A grades.")
+console.log("There are " + b + " B grades.")
+console.log("There are " + c + " C grades.")
+console.log("There are " + d + " D grades.")
+console.log("There are " + f + " F grades.")
 
 
 
-
-
-
-
-
-
-
-/*
-Use console.log to output the following criteria:
-
-How many of each grade?
-What is the lowest grade?
-What is the highest grade?
-
-*/
